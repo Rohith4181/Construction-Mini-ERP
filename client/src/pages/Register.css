@@ -1,0 +1,132 @@
+/* Full screen centered container */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-light, #f3f4f6); /* Uses variable or fallback */
+  padding: 1rem;
+}
+
+/* White Card */
+.register-card {
+  width: 100%;
+  max-width: 450px; /* Slightly wider than login for better spacing */
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.register-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1f2937; /* Dark Grey */
+  margin: 0;
+}
+
+.register-subtitle {
+  color: #6b7280; /* Muted Grey */
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Form Styles */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  box-sizing: border-box; /* Critical for responsiveness */
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb; /* Blue */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Buttons & Alerts */
+.register-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.register-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.register-alert {
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.register-alert.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.register-alert.success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.register-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.register-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}

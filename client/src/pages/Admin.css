@@ -1,0 +1,126 @@
+/* --- Tabs --- */
+.admin-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  color: #007bff;
+}
+
+.tab-btn.active {
+  color: #007bff;
+  font-weight: 600;
+  border-bottom-color: #007bff;
+}
+
+/* --- User Table --- */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.admin-table th, 
+.admin-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #e3f2fd;
+  color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.role-badge {
+  background-color: #f5f5f5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  border: 1px solid #e0e0e0;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.status-dot.active { background-color: #28a745; }
+.status-dot.inactive { background-color: #ccc; }
+
+.action-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.action-btn.edit { background-color: #e3f2fd; color: #007bff; }
+.action-btn.delete { background-color: #ffebee; color: #c62828; }
+
+/* --- Audit Logs --- */
+.audit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.audit-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.audit-item:last-child { border-bottom: none; }
+
+.log-icon { font-size: 1.25rem; }
+
+.log-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.log-action { font-weight: 600; color: #333; }
+.log-user { font-size: 0.85rem; color: #666; }
+
+.log-time {
+  font-size: 0.8rem;
+  color: #999;
+  white-space: nowrap;
+}

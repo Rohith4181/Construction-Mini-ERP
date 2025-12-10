@@ -1,0 +1,89 @@
+/* client/src/components/Sidebar.css */
+
+/* --- MOBILE: Bottom Navigation --- */
+.sidebar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--white);
+  border-top: 1px solid #e5e7eb;
+  z-index: 1000; /* High Z-Index ensures it sits ON TOP of everything */
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.05);
+  display: block !important; /* Force display */
+}
+
+.sidebar-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  width: 100%;
+  height: 100%;
+  transition: color 0.2s;
+}
+
+.nav-item .icon {
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+}
+
+.nav-item.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* --- DESKTOP: Left Sidebar --- */
+@media screen and (min-width: 768px) {
+  .sidebar {
+    position: relative; /* Not fixed anymore */
+    width: 260px;
+    height: auto;
+    border-top: none;
+    border-right: 1px solid #e5e7eb;
+    background-color: var(--white);
+    display: flex !important;
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .nav-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .nav-item:hover {
+    background-color: #eff6ff;
+    color: var(--primary);
+  }
+
+  .nav-item.active {
+    background-color: #eff6ff;
+    color: var(--primary);
+  }
+}

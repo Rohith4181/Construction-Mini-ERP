@@ -1,0 +1,108 @@
+.finance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.create-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.create-btn:hover {
+  background-color: #218838;
+}
+
+/* --- Form Styles --- */
+.invoice-form-card {
+  margin-bottom: 2rem;
+  border: 1px solid #c3e6cb;
+  background-color: #f8fff9;
+}
+
+.invoice-form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.invoice-form input, 
+.invoice-form select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.save-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* --- Table Styles --- */
+.table-responsive {
+  overflow-x: auto; /* Makes table scrollable on mobile */
+}
+
+.finance-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Forces scroll on small screens */
+}
+
+.finance-table th, 
+.finance-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.finance-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #555;
+}
+
+.finance-table .amount {
+  font-weight: 700;
+  color: #333;
+}
+
+.type-badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.type-badge.AP {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.type-badge.AR {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Desktop Form Layout */
+@media screen and (min-width: 768px) {
+  .invoice-form {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  }
+  .save-btn {
+    grid-column: span 3; /* Button spans full width */
+  }
+}

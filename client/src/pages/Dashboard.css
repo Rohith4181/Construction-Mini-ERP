@@ -1,0 +1,94 @@
+.page-title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  font-size: 1.5rem;
+}
+
+.section-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 1.25rem;
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* --- KPI Stats Grid --- */
+.dashboard-stats-grid {
+  display: grid;
+  gap: 1.5rem;
+  /* Mobile: 1 Column */
+  grid-template-columns: 1fr; 
+}
+
+/* --- Projects Grid --- */
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  /* Mobile: 1 Column */
+  grid-template-columns: 1fr;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.status-badge.active {
+  background-color: #e3fcef;
+  color: #006644;
+}
+
+.status-badge.pending {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.status-badge.completed {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablet (2 Columns) */
+@media screen and (min-width: 600px) {
+  .dashboard-stats-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (3 Columns) */
+@media screen and (min-width: 1024px) {
+  .dashboard-stats-grid,
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
