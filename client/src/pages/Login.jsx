@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // <--- Import Link
 import api from '../services/api';
 import './Login.css';
 
@@ -18,13 +18,8 @@ const Login = () => {
     setError('');
     
     try {
-      // 1. Send data to Backend
       const res = await api.post('/auth/login', formData);
-      
-      // 2. Save Token
       localStorage.setItem('token', res.data.token);
-      
-      // 3. Redirect to Dashboard
       navigate('/dashboard');
     } catch (err) {
       console.error(err);
@@ -71,6 +66,12 @@ const Login = () => {
 
           <button type="submit" className="login-btn">Login</button>
         </form>
+
+        {/* 👇 THIS IS THE NEW LINK SECTION */}
+        <p className="register-footer" style={{ marginTop: '1rem', textAlign: 'center' }}>
+          Don't have an account? <Link to="/register" style={{ color: '#2563eb', fontWeight: 'bold' }}>Register here</Link>
+        </p>
+
       </div>
     </div>
   );
