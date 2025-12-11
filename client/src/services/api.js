@@ -1,9 +1,11 @@
 // client/src/services/api.js
 import axios from 'axios';
 
-// Create an Axios instance with your backend URL
+// Create an Axios instance
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  // 👇 THIS IS THE FIX:
+  // It checks if there is a Cloud URL first. If not, it falls back to localhost.
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api', 
   headers: {
     'Content-Type': 'application/json',
   },
